@@ -18,7 +18,9 @@ LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),leo)
 
+# LOCAL_SHARED_LIBRARIES := libc++ libc libcutils libdl libm libqmi_cci libqmi_common_so libqmiservices libhidlbase libhidltransport libhwbinder liblog libm libutils com.quicinc.cne.constants@2.0 com.quicinc.cne.constants@1.0 
 include $(CLEAR_VARS)
+LOCAL_CHECK_ELF_FILES := false
 LOCAL_MODULE := libqminvapi
 LOCAL_MODULE_OWNER := xiaomi
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libqminvapi.so
@@ -28,9 +30,11 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_VENDOR_MODULE := true
+#LOCAL_SHARED_LIBRARIES := libc++ libc libcutils libdl libm libqmi_cci libqmi_common_so libqmiservices
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_CHECK_ELF_FILES := false
 LOCAL_MODULE := com.quicinc.cne.api@1.0
 LOCAL_MODULE_OWNER := xiaomi
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/com.quicinc.cne.api@1.0.so
@@ -40,9 +44,11 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_VENDOR_MODULE := true
+LOCAL_SHARED_LIBRARIES := com.quicinc.cne.constants@1.0 libc++ libc libcutils libdl libhidlbase libhidltransport libhwbinder liblog libm libutils
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_CHECK_ELF_FILES := false
 LOCAL_MODULE := com.quicinc.cne.constants@1.0
 LOCAL_MODULE_OWNER := xiaomi
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/com.quicinc.cne.constants@1.0.so
@@ -52,9 +58,11 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_VENDOR_MODULE := true
+LOCAL_SHARED_LIBRARIES := libc++ libc libcutils libdl libhidlbase libhidltransport libhwbinder liblog libm libutils
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_CHECK_ELF_FILES := false
 LOCAL_MODULE := com.quicinc.cne.constants@2.0
 LOCAL_MODULE_OWNER := xiaomi
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/com.quicinc.cne.constants@2.0.so
@@ -64,9 +72,11 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_VENDOR_MODULE := true
+LOCAL_SHARED_LIBRARIES := libc++ libc libcutils libdl libhidlbase libhidltransport libhwbinder liblog libm libutils
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_CHECK_ELF_FILES := false
 LOCAL_MODULE := com.quicinc.cne.server@1.0
 LOCAL_MODULE_OWNER := xiaomi
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/com.quicinc.cne.server@1.0.so
@@ -76,9 +86,11 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_VENDOR_MODULE := true
+LOCAL_SHARED_LIBRARIES := com.quicinc.cne.constants@1.0 libc++ libc libcutils libdl libhidlbase libhidltransport libhwbinder liblog libm libutils
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_CHECK_ELF_FILES := false
 LOCAL_MODULE := com.quicinc.cne.server@2.0
 LOCAL_MODULE_OWNER := xiaomi
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/com.quicinc.cne.server@2.0.so
@@ -88,9 +100,11 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_VENDOR_MODULE := true
+LOCAL_SHARED_LIBRARIES := com.quicinc.cne.constants@2.0 libc++ libc libcutils libdl libhidlbase libhidltransport libhwbinder liblog libm libutils
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_CHECK_ELF_FILES := false
 LOCAL_MODULE := libtime_genoff
 LOCAL_MODULE_OWNER := xiaomi
 LOCAL_SRC_FILES_64 := proprietary/vendor/lib64/libtime_genoff.so
@@ -100,6 +114,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_VENDOR_MODULE := true
+LOCAL_SHARED_LIBRARIES := libc++ libc libcutils libdl libm
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
